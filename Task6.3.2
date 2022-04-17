@@ -1,0 +1,19 @@
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+
+def get_letters():
+    """
+       This function returns all alphabets letters.
+       :return: list of all letters
+       """
+    return [chr(i) for i in range(ord('A'), ord('Z') + 1)] + [chr(i) for i in range(ord('a'), ord('z') + 1)]
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print(get_letters())
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
