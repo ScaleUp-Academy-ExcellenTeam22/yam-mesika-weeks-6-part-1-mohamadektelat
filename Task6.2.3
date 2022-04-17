@@ -1,0 +1,42 @@
+# This is a sample Python script.
+import timeit
+
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+def zip(list1, list2):
+    """
+    This function Implements a for loop with 1000 cycles.
+    :param: list1.
+    :param: list2.
+    """
+    for i in range(10000):
+        var = None
+
+
+def timer(func, *args, **arguments):
+    """
+    This function calculates the time that taken to finish running the given function.
+    :param: func.
+    :param: args.
+    :param: arguments.
+    :return: the time that taken to finish running the given function.
+    """
+    start = timeit.default_timer()
+    func(*args, **arguments)
+    stop = timeit.default_timer()
+    return stop - start
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    time1 = timer(zip, [0, 1], [4, 5])
+    print(time1)
+
+    time2 = timer(print, "hello")
+    print(time2)
+
+    time3 = timer('Hi {name}'.format, name="Bug")
+    print(time3)
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
