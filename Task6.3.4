@@ -1,0 +1,29 @@
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+
+def full_names(first_names_list, last_names_list, min_length=0):
+    """
+       This function returns list of full names of all composition of first and last names.
+       :param: first_names_list.
+       :param: last_names_list.
+       :param: min_length(optional).
+       :return: list of full names of all composition of first and last names.
+    """
+    return [first_name.capitalize() + ' ' + last_name.capitalize()
+            for first_name in first_names_list
+            for last_name in last_names_list
+            if len(first_name + last_name) >= min_length]
+
+
+# Press the green button in the gutter to run the script.
+
+if __name__ == '__main__':
+    first_names = ['avi', 'moshe', 'yaakov']
+    last_names = ['cohen', 'levi', 'mizrahi']
+    print(full_names(first_names, last_names, 10))
+    print(full_names(first_names, last_names))
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
