@@ -1,0 +1,50 @@
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+numbers = [0, 6, 12, 7, 3, 1000, 1001, 222]
+objects = [0, 1, [], 4, 5, "", None, 8]
+
+
+def is_even(number):
+    """
+    This function returns if the number is even or not.
+    :param: number
+    :return: boolean if number is even.
+    """
+    return number % 2 == 0
+
+
+def identity(x):
+    """
+    This function called if the user passed "None",it yields those items that evaluate to True.
+    :param: x.
+    :return: if x is object.
+    """
+    return x
+
+
+def my_filter(function, array):
+    """
+    That function is a remake function for the filter function, it takes a function and list,then the function returns
+    the variables that the passed function returns true for theme.
+    :param: function.
+    :param: array.
+    :return: returns the variables that the passed function returns true for theme.
+    """
+    if function is None:
+        function = identity
+    for obj in array:
+        if function(obj):
+            yield obj
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    even_numbers = list(my_filter(is_even, numbers))
+    print(even_numbers)
+
+    object = list(my_filter(None, objects))
+    print(object)
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
